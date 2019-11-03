@@ -1,0 +1,34 @@
+<div class="container">
+  <h1 style="text-align: center; font-size:35; font-weight:bold">{{title}}</h1>
+  <hr style="height: 3px; background:red; border-radius:1px">
+  <div class="row" style="padding-top: 50px">
+    <div class="col-3">
+      <dl>
+        <h4 style="color:blue; font-family: Arial, Helvetica, sans-serif; font-weight: bold">Links</h4>
+        <li><a href="./guitar/guitar.component.html" style="color: red"><u>View Cart</u></a></li>
+        <li><a href="./piano/piano.component.html" style="color: red"><u>Login/Register</u></a></li>
+        <li><a href="./trong/trong.component.html" style="color: red"><u>Home</u></a></li>
+      </dl>
+
+      <dl>
+        <h4 style="color: blue; font-family: Arial, Helvetica, sans-serif; font-weight: bold">Categires</h4>
+        <li *ngFor="let a of danhmuc"><a [routerLink]="['/sanpham', a.id]" (click)="LoadData()"
+            style="color: red"><u>{{a.catename}}</u></a></li>
+      </dl>
+
+      <dl>
+        <h4 style="color:blue; font-family: Arial, Helvetica, sans-serif; font-weight: bold">Temp Link</h4>
+        <li><a href="#" style="color: red"><u>Admin</u></a></li>
+      </dl>
+
+    </div>
+    <div class="col-9">
+      <router-outlet>
+      </router-outlet>
+    </div>
+
+  </div>
+
+  <hr style="height: 3px; background:red; border-radius:1px">
+  <p style="font-weight: bold; font-size: 14px; float: right">&copy; <u> My Guitar Shop, Inc</u></p>
+</div>

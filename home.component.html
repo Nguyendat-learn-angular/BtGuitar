@@ -1,0 +1,22 @@
+<div class="row" *ngFor="let p of product">
+    <div class="card" style="margin-bottom: 10px;">
+        <div class="card-header">
+            <a [routerLink]="['/detail',p.id]" style="font-size: 24px; font-weight:bold">{{p.productname}}</a>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3">
+                    <img src="../../assets/{{p.img}}" class="img-fluid" alt="Responsive image" style="border-radius: 5px">
+                </div>
+                <div class="col-9">
+                    <p class="card-text">{{p.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="btn" style="text-align: center">
+        <a href="../piano/piano.component.html" style="margin: 10px"><button type="button" class="btn btn-primary">Pianos</button></a>
+        <a href="../guitar/guitar.component.html" style="margin: 10px"><button type="button" class="btn btn-danger">Guitars</button></a>
+        <a href="../trong/trong.component.html" style="margin: 10px"><button type="button" class="btn btn-dark">Drums</button></a>
+</div>
